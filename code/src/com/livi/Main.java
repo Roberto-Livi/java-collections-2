@@ -1,6 +1,7 @@
 package com.livi;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Main {
 
@@ -45,6 +46,30 @@ public class Main {
         else {
             System.out.println("No Tanner here");
         }
+
+        System.out.println("Iterating with a for loop");
+        for(int i = 0; i < listOne.size(); i++) {
+            System.out.println(listOne.get(i));
+        }
+
+        System.out.println("====================");
+
+        System.out.println("Iterating with Iterator");
+        Iterator<String> itr = listOne.iterator();
+
+        System.out.println(itr.next());
+        System.out.println(itr.next());
+
+        while(itr.hasNext()) {
+            String str = itr.next();
+            System.out.println(str);
+            if(str.equals("Jack")) {
+                itr.remove();
+            }
+        }
+
+        System.out.println("====================");
+
 
 
 
